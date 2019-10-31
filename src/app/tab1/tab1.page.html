@@ -1,13 +1,66 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Test hahahah loll felicia yg ubah
-    </ion-title>
+
+    <!-- <ion-title>
+      Home
+    </ion-title> -->
+    <ion-item lines="none">
+      <ion-searchbar mode="ios" style="padding: 0;"></ion-searchbar>
+
+      <!-- <ion-button class="ion-no-margin" slot="end" fill="clear" >
+        <ion-icon slot="icon-only" name="basket"></ion-icon>
+      </ion-button>
+      <ion-button class="ion-no-margin" slot="end" fill="clear" >
+        <ion-icon slot="icon-only" name="airplane"></ion-icon>
+      </ion-button> -->
+      <ion-icon name="basket" slot="end"></ion-icon>
+        <ion-icon name="airplane" slot="end"></ion-icon>
+    </ion-item>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
+
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <ion-img src="assets/imgs/promo1.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/imgs/promo2.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/imgs/promo3.jpg"></ion-img>
+    </ion-slide>
+  </ion-slides>
+
+
+  <ion-button (click)="openProductDetailPreorder()">
+    Preorder product detail
+  </ion-button>
+
+  <ion-button routerLink="/product-detail-request" routerDirection="forward">
+      Request product detail
+    </ion-button>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="basket"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="star"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="airplane"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <!-- <ion-card class="welcome-card">
       <img src="/assets/shapes.svg" alt="" />
       <ion-card-header>
         <ion-card-subtitle>Get Started</ion-card-subtitle>
@@ -37,5 +90,5 @@
         <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
         <ion-label>Theme Your App</ion-label>
       </ion-item>
-    </ion-list>
+    </ion-list> -->
 </ion-content>
