@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,22 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400,
+    autoplay: true,
+    loop: true,
+    preloadImages: true,
+    updateOnImagesReady: true,
+  };
+
+  constructor(
+    private _navCtrl: NavController,
+  ) {}
+
+  openProductDetailPreorder() {
+    // this._router.navigateByUrl('product-detail-preorder');
+    this._navCtrl.navigateForward('product-detail-preorder');
+  }
 
 }
