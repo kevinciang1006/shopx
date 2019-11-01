@@ -25,5 +25,10 @@ export class Tab1Page {
     // this._router.navigateByUrl('product-detail-preorder');
     this._navCtrl.navigateForward('product-detail-preorder');
   }
+  
+  openLogin() {
+    // this._router.navigateByUrl('product-detail-preorder');
+    this._navCtrl.navigateForward('login');
+  }
 
 }
