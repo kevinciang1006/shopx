@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { CountriesDB } from '../@fake-db/countries';
+import { Preorders } from '../@fake-db/preorders';
+import { ProductsTrending } from '../@fake-db/products-trending';
+import { ProductsRecommendation } from '../@fake-db/products-recommendation';
+import { ProductsCategories } from '../@fake-db/products-categories';
+import { TopTravellers } from '../@fake-db/top-travellers';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +13,15 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  countries = CountriesDB;
+  preorders = Preorders;
+  productsTrending = ProductsTrending;
+  productsRecommendation = ProductsRecommendation;
+  productsCategories = ProductsCategories;
+  topTravellers = TopTravellers;
+
+  stars = [1, 2, 3, 4, 5];
 
   slideOpts = {
     initialSlide: 1,
@@ -19,7 +34,9 @@ export class Tab1Page {
 
   constructor(
     private _navCtrl: NavController,
-  ) {}
+  ) {
+    this.topTravellers = this.topTravellers.sort((n1, n2) => n2.review_count - n1.review_count);
+  }
 
   openProductDetailPreorder() {
     // this._router.navigateByUrl('product-detail-preorder');
