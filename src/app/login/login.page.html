@@ -16,21 +16,22 @@
         <br>
          <ion-item>
             <ion-label color="primary" >Username</ion-label>
-            <ion-input type="email" [(ngModel)]="credentials.username" ></ion-input>
+            <ion-input type="email"></ion-input>
           </ion-item>
           <br>
           <ion-item>
             <ion-label color="primary" >Password</ion-label>
-            <ion-input type="password" [(ngModel)]="credentials.password" ></ion-input>
+            <ion-input type="password"></ion-input>
         </ion-item>
  
         <br>
         <br>
-        <button ion-button round center (click)="Openlogin()">Login</button>
+        <button ion-button round center>Login</button>
  
         <br>
         <p  text-center tappable> Forget Password </p>
-        <p  text-center tappable (click)="OpenLogin()" > Don't have account? Register </p>
+        
+        <p  text-center tappable> Don't have account? Register </p>
         
     </ion-list>
 </ion-content>
