@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { CountriesDB } from '../@fake-db/countries';
-import { Preorders } from '../@fake-db/preorders';
+import { Preorders } from '../@fake-db/products-preorders';
 import { ProductsTrending } from '../@fake-db/products-trending';
 import { ProductsRecommendation } from '../@fake-db/products-recommendation';
 import { ProductsCategories } from '../@fake-db/products-categories';

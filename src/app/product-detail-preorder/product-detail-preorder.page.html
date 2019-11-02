@@ -3,22 +3,198 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="tab1"></ion-back-button>
     </ion-buttons>
-    <ion-title>Product Detail Preorder</ion-title>
+    <ion-title>{{product.name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="share"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-slides pager="true">
-    <ion-slide>
-      <ion-img src="assets/imgs/promo1.jpg"></ion-img>
-    </ion-slide>
-    <ion-slide>
-      <ion-img src="assets/imgs/promo2.jpg"></ion-img>
-    </ion-slide>
-    <ion-slide>
-      <ion-img src="assets/imgs/promo3.jpg"></ion-img>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide *ngFor="let item of product.images">
+      <ion-img [src]="item.image"></ion-img>
     </ion-slide>
   </ion-slides>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-note>Pre-order ID: {{product.preorder_id}}</ion-note>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="10">
+        <h3 class="ion-no-margin"><b>{{product.name}}</b></h3>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="heart-empty" class="ion-float-right" style="font-size: 1.6em"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="auto">
+        <ion-badge class="" color="success" mode="ios">{{product.status | uppercase}}</ion-badge>
+      </ion-col>
+      <ion-note>Expiration date: {{product.close_date}} {{product.close_time}}</ion-note>
+    </ion-row>
+    <ion-row class="ion-margin-bottom">
+      <ion-col>
+        <ion-note>{{product.description}}</ion-note>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="auto">
+        <ion-icon name="pricetag" color="primary" style="font-size: 1.2em"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-note>Brand: </ion-note>
+        <ion-text>{{product.name}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="auto">
+        <ion-icon name="globe" color="primary" style="font-size: 1.2em"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-note>Purchase Location: </ion-note>
+        <ion-text>{{product.purchase_location}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="auto">
+        <ion-icon name="pin" color="primary" style="font-size: 1.2em"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-note>Transaction Location: </ion-note>
+        <ion-text>{{product.transaction_location}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-margin-bottom">
+      <ion-col size="auto">
+        <ion-icon name="boat" color="primary" style="font-size: 1.2em"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-note>Delivery Estimation: </ion-note>
+        <ion-text>{{product.delivery_estimation}}</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid style="background-color: var(--ion-color-light)">
+    <ion-row>
+      <ion-col size="auto">
+        <ion-icon name="cash" color="primary" style="font-size: 1.2em"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-text>Price</ion-text>
+          <ion-text class="ion-float-right">Rp. 124.444</ion-text>
+        </div>
+        <ion-note>Does not include shipping price</ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text>Choices</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of product.products" class="ion-margin">
+      <ion-col>
+        <div>
+          <b>{{item.name}}</b>
+          <ion-note class="ion-float-right">{{item.status}}</ion-note>
+        </div>
+        <ion-note>{{item.price}}</ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid style="background-color: var(--ion-color-light)">
+    <ion-row>
+      <ion-col>
+        <ion-text>Opened by:</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="ion-activatable" lines="none">
+          <ion-ripple-effect></ion-ripple-effect>
+          <ion-avatar slot="start">
+            <img [src]="product.traveller_avatar">
+          </ion-avatar>
+          <ion-label>
+            <h2><b>{{product.traveller_name}}</b>
+              <ion-icon name="checkmark-circle" color="success"></ion-icon>
+            </h2>
+            <div>
+              <ion-text color="warning">
+                <ion-icon *ngFor="let star of stars" name="star"></ion-icon>
+              </ion-text>
+            </div>
+            <ion-note>{{product.traveller_review}} reviews</ion-note>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text>Comments</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text class="ion-float-right" color="primary">See All</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let comments of product.comments">
+      <ion-col size="12" *ngFor="let item of comments.users">
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <img [src]="item.avatar">
+          </ion-avatar>
+          <ion-label>
+            <ion-note>{{item.fullname}} &bull; {{item.comment_date}}</ion-note>
+            <div class="text-truncate">{{item.comment}}</div>
+            <ion-text color="primary">See 1 reply</ion-text>
+          </ion-label>
+        </ion-item>
+        <ion-item class="ion-margin-start" lines="none">
+          <ion-avatar slot="start">
+            <img [src]="product.traveller_avatar">
+          </ion-avatar>
+          <ion-label>
+            <ion-note>{{product.traveller_name}} &bull; {{item.reply_date}}
+              <ion-badge color="danger" mode="ios">{{"Traveller" | uppercase}}</ion-badge>
+            </ion-note>
+            <div class="text-truncate">{{item.reply}}</div>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item-divider></ion-item-divider>
+  <ion-item lines="none" style="display: table; margin: auto">
+    <ion-icon item-start name="chatboxes" style="font-size: 1.6em" color="primary"></ion-icon>
+    <ion-text color="primary">Comments</ion-text>
+  </ion-item>
+  <ion-grid style="background-color: var(--ion-color-light)">
+    <ion-row>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar class="ion-activatable" color="primary">
+    <ion-ripple-effect></ion-ripple-effect>
+    <ion-title class="ion-text-center">BUY NOW!</ion-title>
+  </ion-toolbar>
+</ion-footer>

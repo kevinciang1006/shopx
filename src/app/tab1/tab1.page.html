@@ -1,21 +1,18 @@
 <ion-header>
   <ion-toolbar>
 
-    <!-- <ion-title>
-      Home
-    </ion-title> -->
     <ion-item lines="none">
       <ion-searchbar mode="ios" style="padding: 0;"></ion-searchbar>
+    </ion-item>
 
-      <!-- <ion-button class="ion-no-margin" slot="end" fill="clear" >
+    <ion-buttons slot="end">
+      <ion-button>
         <ion-icon slot="icon-only" name="basket"></ion-icon>
       </ion-button>
-      <ion-button class="ion-no-margin" slot="end" fill="clear" >
+      <ion-button>
         <ion-icon slot="icon-only" name="airplane"></ion-icon>
-      </ion-button> -->
-      <ion-icon name="basket" slot="end"></ion-icon>
-      <ion-icon name="airplane" slot="end"></ion-icon>
-    </ion-item>
+      </ion-button>
+    </ion-buttons>
 
   </ion-toolbar>
 </ion-header>
@@ -44,7 +41,8 @@
       </ion-col>
     </ion-row>
     <ion-row nowrap class="container-horizontal">
-      <ion-col *ngFor="let item of countries" size="3" class="ion-align-self-start">
+      <ion-col *ngFor="let item of countries" size="3" class="ion-align-self-start ion-activatable">
+        <ion-ripple-effect></ion-ripple-effect>
         <ion-avatar style="margin: auto">
           <img [src]="item.flag">
         </ion-avatar>
@@ -62,7 +60,8 @@
     </ion-row>
     <ion-row nowrap class="container-horizontal">
       <ion-col *ngFor="let item of preorders" size="4" class="ion-align-self-start">
-        <ion-card class="ion-no-margin" (click)="openProductDetailPreorder()">
+        <ion-card class="ion-no-margin ion-activatable" (click)="openProductDetailPreorder()">
+          <ion-ripple-effect></ion-ripple-effect>
           <img [src]="item.product_image">
           <ion-card-content>
             <div class="text-truncate">
@@ -87,7 +86,8 @@
     </ion-row>
     <ion-row nowrap class="container-horizontal">
       <ion-col *ngFor="let item of productsTrending" size="4" class="ion-align-self-start">
-        <ion-card class="ion-no-margin">
+        <ion-card class="ion-no-margin ion-activatable">
+          <ion-ripple-effect></ion-ripple-effect>
           <img [src]="item.product_image">
           <ion-card-content>
             <div class="text-truncate">
@@ -112,7 +112,8 @@
     </ion-row>
     <ion-row nowrap class="container-horizontal">
       <ion-col *ngFor="let item of productsRecommendation" size="4" class="ion-align-self-start">
-        <ion-card class="ion-no-margin">
+        <ion-card class="ion-no-margin ion-activatable">
+          <ion-ripple-effect></ion-ripple-effect>
           <img [src]="item.product_image">
           <ion-card-content>
             <div class="text-truncate">
@@ -137,7 +138,8 @@
     </ion-row>
     <ion-row nowrap class="container-horizontal">
       <ion-col *ngFor="let item of productsCategories" size="4" class="ion-align-self-start">
-        <ion-card class="ion-no-margin">
+        <ion-card class="ion-no-margin ion-activatable">
+          <ion-ripple-effect></ion-ripple-effect>
           <img [src]="item.image">
           <ion-card-content>
             <div class="text-truncate">
@@ -158,13 +160,14 @@
     </ion-row>
     <ion-row nowrap class="container-horizontal">
       <ion-col *ngFor="let item of topTravellers" size="4" class="ion-align-self-start">
-        <ion-card class="ion-no-margin">
+        <ion-card class="ion-no-margin ion-activatable">
+          <ion-ripple-effect></ion-ripple-effect>
           <ion-avatar style="margin: auto">
             <img [src]="item.avatar">
           </ion-avatar>
           <ion-card-content>
             <div class="text-truncate">
-                <ion-icon name="checkmark-circle" color="success"></ion-icon>
+              <ion-icon name="checkmark-circle" color="success"></ion-icon>
               <b>{{item.full_name}}</b>
             </div>
             <div>
