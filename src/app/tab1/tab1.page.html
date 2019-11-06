@@ -1,22 +1,18 @@
 <ion-header>
   <ion-toolbar>
 
-    <!-- <ion-title>
-      Home
-    </ion-title> -->
     <ion-item lines="none">
       <ion-searchbar mode="ios" style="padding: 0;"></ion-searchbar>
-
-      <!-- <ion-button class="ion-no-margin" slot="end" fill="clear" >
-        <ion-icon slot="icon-only" name="basket"></ion-icon>
-      </ion-button>
-      <ion-button class="ion-no-margin" slot="end" fill="clear" >
-        <ion-icon slot="icon-only" name="airplane"></ion-icon>
-      </ion-button> -->
-      <ion-icon name="basket" slot="end"></ion-icon>
-      <ion-icon name="airplane" slot="end"></ion-icon>
     </ion-item>
 
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="basket"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="airplane"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -35,9 +31,145 @@
   </ion-slides>
 
 
-  <ion-button (click)="openProductDetailPreorder()">
-    Preorder product detail
-  </ion-button>
+  ini nama nama tim mp
+
+  <div *ngFor="let nama of namaTim">
+    {{nama}}
+  </div>
+
+  <div>
+    {{namaTim[1]}}
+  </div>
+
+  <br>
+  ini product objedt 
+
+  <div>
+      {{product.color}}    
+  </div>
+
+  <div>
+      {{product.description}}    
+  </div>
+
+  <div>
+      {{product.name}}    
+  </div>
+
+  munculkan array object 
+  <div>{{products[0]}}</div>
+
+
+  <div>{{productPreorders[1].nama}}</div>
+
+  <br>
+  <div *ngFor="let item of productPreorders">
+  {{item.name}}   
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <b>Countries</b>
+      </ion-col>
+      <ion-col>
+        <ion-text class="ion-float-right" color="primary">See All</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row nowrap class="container-horizontal">
+
+      <ion-col *ngFor="let item of countries" size="3" class="ion-align-self-start ion-activatable">
+        <ion-ripple-effect></ion-ripple-effect>
+        <ion-avatar style="margin: auto">
+          <img [src]="item.flag">
+        </ion-avatar>
+        <p class="text-truncate ion-text-center">{{item.name}}</p>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <b>Pre-orders by Travellers</b>
+      </ion-col>
+      <ion-col>
+        <ion-text class="ion-float-right" color="primary">See All</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row nowrap class="container-horizontal">
+
+
+      <ion-col *ngFor="let item of preorders" size="4" class="ion-align-self-start">
+        <ion-card class="ion-no-margin ion-activatable" (click)="openProductDetailPreorder()">
+          <ion-ripple-effect></ion-ripple-effect>
+          <img [src]="item.product_image">
+          <ion-card-content>
+            <div class="text-truncate">
+              <ion-text color="dark">{{item.title}}</ion-text>
+            </div>
+            <div class="text-truncate ion-margin-bottom">
+              <ion-text color="primary">{{item.price_min}} - {{item.price_max}}</ion-text>
+            </div>
+            <ion-note>{{item.country}}</ion-note>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <b>Trending Requests</b>
+      </ion-col>
+      <ion-col>
+        <ion-text class="ion-float-right" color="primary">See All</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row nowrap class="container-horizontal">
+      <ion-col *ngFor="let item of productsTrending" size="4" class="ion-align-self-start">
+        <ion-card class="ion-no-margin ion-activatable">
+          <ion-ripple-effect></ion-ripple-effect>
+          <img [src]="item.product_image">
+          <ion-card-content>
+            <div class="text-truncate">
+              <ion-text color="dark">{{item.title}}</ion-text>
+            </div>
+            <div class="text-truncate ion-margin-bottom">
+              <ion-text color="primary">{{item.request_amount}} request</ion-text>
+            </div>
+            <ion-note>{{item.country}}</ion-note>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <b>Newest Recommendation</b>
+      </ion-col>
+      <ion-col>
+        <ion-text class="ion-float-right" color="primary">See All</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row nowrap class="container-horizontal">
+      <ion-col *ngFor="let item of productsRecommendation" size="4" class="ion-align-self-start">
+        <ion-card class="ion-no-margin ion-activatable">
+          <ion-ripple-effect></ion-ripple-effect>
+          <img [src]="item.product_image">
+          <ion-card-content>
+            <div class="text-truncate">
+              <ion-text color="dark">{{item.title}}</ion-text>
+            </div>
+            <div class="text-truncate ion-margin-bottom">
+              <ion-text color="primary">{{item.price}}</ion-text>
+            </div>
+            <ion-note>{{item.country}}</ion-note>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
 
   <ion-button (click)="openLogin()">
@@ -57,6 +189,61 @@
 
     Crline dfasdf ubah sesuatu
 
+    <ion-row>
+      <ion-col>
+        <b>Categories</b>
+      </ion-col>
+      <ion-col>
+        <ion-text class="ion-float-right" color="primary">See All</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row nowrap class="container-horizontal">
+      <ion-col *ngFor="let item of productsCategories" size="4" class="ion-align-self-start">
+        <ion-card class="ion-no-margin ion-activatable">
+          <ion-ripple-effect></ion-ripple-effect>
+          <img [src]="item.image">
+          <ion-card-content>
+            <div class="text-truncate">
+              <ion-text color="dark">{{item.category}}</ion-text>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <b>Top Travellers</b>
+      </ion-col>
+      <ion-col>
+        <ion-text class="ion-float-right" color="primary">See All</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row nowrap class="container-horizontal">
+      <ion-col *ngFor="let item of topTravellers" size="4" class="ion-align-self-start">
+        <ion-card class="ion-no-margin ion-activatable">
+          <ion-ripple-effect></ion-ripple-effect>
+          <ion-avatar style="margin: auto">
+            <img [src]="item.avatar">
+          </ion-avatar>
+          <ion-card-content>
+            <div class="text-truncate">
+              <ion-icon name="checkmark-circle" color="success"></ion-icon>
+              <b>{{item.full_name}}</b>
+            </div>
+            <div>
+              <ion-text color="warning">
+                <ion-icon *ngFor="let star of stars" name="star"></ion-icon>
+              </ion-text>
+            </div>
+            <ion-note>{{item.review_count}} reviews</ion-note>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
@@ -74,35 +261,4 @@
     </ion-fab-list>
   </ion-fab>
 
-  <!-- <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list> -->
 </ion-content>
