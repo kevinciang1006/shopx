@@ -31,6 +31,43 @@
     </ion-slide>
   </ion-slides>
 
+
+  ini nama nama tim mp
+
+  <div *ngFor="let nama of namaTim">
+    {{nama}}
+  </div>
+
+  <div>
+    {{namaTim[1]}}
+  </div>
+
+  <br>
+  ini product objedt 
+
+  <div>
+      {{product.color}}    
+  </div>
+
+  <div>
+      {{product.description}}    
+  </div>
+
+  <div>
+      {{product.name}}    
+  </div>
+
+  munculkan array object 
+  <div>{{products[0]}}</div>
+
+
+  <div>{{productPreorders[1].nama}}</div>
+
+  <br>
+  <div *ngFor="let item of productPreorders">
+  {{item.name}}   
+  </div>
+
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -41,6 +78,7 @@
       </ion-col>
     </ion-row>
     <ion-row nowrap class="container-horizontal">
+
       <ion-col *ngFor="let item of countries" size="3" class="ion-align-self-start ion-activatable">
         <ion-ripple-effect></ion-ripple-effect>
         <ion-avatar style="margin: auto">
@@ -48,6 +86,7 @@
         </ion-avatar>
         <p class="text-truncate ion-text-center">{{item.name}}</p>
       </ion-col>
+
     </ion-row>
 
     <ion-row>
@@ -58,7 +97,10 @@
         <ion-text class="ion-float-right" color="primary">See All</ion-text>
       </ion-col>
     </ion-row>
+
     <ion-row nowrap class="container-horizontal">
+
+
       <ion-col *ngFor="let item of preorders" size="4" class="ion-align-self-start">
         <ion-card class="ion-no-margin ion-activatable" (click)="openProductDetailPreorder()">
           <ion-ripple-effect></ion-ripple-effect>
@@ -74,6 +116,8 @@
           </ion-card-content>
         </ion-card>
       </ion-col>
+
+
     </ion-row>
 
     <ion-row>

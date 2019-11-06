@@ -5,13 +5,13 @@
 export const CountriesDB =
     [
         {
-            "currencies": [
-                {
-                    "code": "AFN",
-                    "name": "Afghan afghani",
-                    "symbol": "؋"
-                }
-            ],
+            // "currencies": [
+            //     {
+            //         "code": "AFN",
+            //         "name": "Afghan afghani",
+            //         "symbol": "؋"
+            //     }
+            // ],
             "flag": "https://restcountries.eu/data/afg.svg",
             "name": "Afghanistan",
             "capital": "Kabul"
