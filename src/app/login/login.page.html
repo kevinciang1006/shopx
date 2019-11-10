@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    
+
     <ion-buttons slot="start">
       <ion-back-button defaultHref="tab1"></ion-back-button>
     </ion-buttons>
@@ -9,32 +9,37 @@
   </ion-toolbar>
 </ion-header>
 
-  <ion-content padding style="background-color: blue;">
-    <ion-list text-center>
-        <br>
-        <H3> Welcome </H3>
-        <br>
-         <ion-item>
-            <ion-label color="secondary" >Username</ion-label>
-            <ion-input type="email"></ion-input>
-          </ion-item>
-          <br>
-          <ion-item>
-            <ion-label color="secondary" >Password</ion-label>
-            <ion-input type="password"></ion-input>
-        </ion-item>
- 
-        <br>
-        <br>
-        <!-- Default -->
-          <ion-button>Login</ion-button>
+<ion-content padding style="background-color: blue;">
+  <br>
+  <br>
+  <!-- Expand -->
+  <ion-button expand="full">LOG IN WITH FACEBOOK</ion-button>
 
- 
-        <br>
-        <p  text-center tappable> Forget Password </p>
-        
-        <p  text-center tappable> Don't have account? Register </p>
-        
-    </ion-list>
+  <ion-list text-center>
+
+    <H3> ------or------ </H3>
+
+    <ion-item>
+      <ion-label color="secondary">Email Address</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label color="secondary">Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <br>
+    <br>
+    <!-- Default -->
+    <ion-button COLOR="secondary">LOG IN USING EMAIL</ion-button>
+
+
+    <br>
+
+    <p text-center tappable> Don't have account? <a routerlink="/Register">Register </a>
+    </p>
+    <p text-center tappable><a routerlink="/forgetpass"> Forgot Your Password ?</a></p>
+
+  </ion-list>
 </ion-content>
-

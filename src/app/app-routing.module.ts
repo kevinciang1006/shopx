@@ -8,7 +8,11 @@ const routes: Routes = [
   },
   // { path: 'tab4', loadChildren: './tab4/tab4.module#Tab4PageModule' },
   { path: 'product-detail-preorder', loadChildren: './product-detail-preorder/product-detail-preorder.module#ProductDetailPreorderPageModule' },
-  { path: 'product-detail-request', loadChildren: './product-detail-request/product-detail-request.module#ProductDetailRequestPageModule' },  { path: 'login', loadChildren: './login/login.module#LoginPageModule' }
+  { path: 'product-detail-request', loadChildren: './product-detail-request/product-detail-request.module#ProductDetailRequestPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },  { path: 'forgetpass', loadChildren: './forgetpass/forgetpass.module#ForgetpassPageModule' },
+  { path: 'signup', loadChildren: './signup/signup.module#SignupPageModule' },
+
+  // { path: 'forgetpassword', loadChildren: './forgetpassword/forgetpassword.module#ForgetpasswordPageModule' }
 
 ];
 @NgModule({
