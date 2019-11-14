@@ -7,7 +7,7 @@
 
     <ion-buttons slot="end">
       <ion-button>
-        <ion-icon slot="icon-only" name="basket"></ion-icon>
+        <ion-icon slot="icon-only" name="basket" (click)="openpurchasepage()"></ion-icon>
       </ion-button>
       <ion-button>
         <ion-icon slot="icon-only" name="airplane"></ion-icon>
@@ -32,7 +32,7 @@
   </ion-slides>
 
 
-  ini nama nama tim mp
+ <!-- ini nama nama tim mp
 
   <div *ngFor="let nama of namaTim">
     {{nama}}
@@ -66,7 +66,7 @@
   <br>
   <div *ngFor="let item of productPreorders">
   {{item.name}}   
-  </div>
+  </div> -->
 
   <ion-grid>
     <ion-row>
@@ -125,7 +125,8 @@
         <b>Trending Requests</b>
       </ion-col>
       <ion-col>
-        <ion-text class="ion-float-right" color="primary">See All</ion-text>
+          
+        <ion-text class="ion-float-right" color="primary" (click)="opentrendingreq()">See All</ion-text>
       </ion-col>
     </ion-row>
     <ion-row nowrap class="container-horizontal">

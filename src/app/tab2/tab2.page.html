@@ -3,16 +3,60 @@
     <ion-title>
       Favorite
     </ion-title>
-    </ion-toolbar>
+  </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-button (click)="openProductDetailPreorder()">
+
+  <ion-list>
+    <ion-item *ngFor="let item of favorites">
+      <ion-thumbnail item-start style="padding-right: 8px;">
+        <img src="{{item.image}}">
+      </ion-thumbnail>
+      <ion-label>
+          <h2>{{item.name}}</h2>
+          <p>{{item.country}} {{item.price}}</p>
+          <!-- <ion-button ion-button clear item-end (click)="openProductDetailRequest()">View</ion-button> -->
+          <ion-text class="ion-float-right" color="primary" (click)="openProductDetailRequest()">View</ion-text>
+
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-grid>
+      <ion-row>
+          <ion-col>
+            <b>Trending Requests</b>
+          </ion-col>
+          <ion-col>
+            <ion-text class="ion-float-right" color="primary">See All</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row nowrap class="container-horizontal">
+          <ion-col *ngFor="let item of productsTrending" size="4" class="ion-align-self-start">
+            <ion-card class="ion-no-margin ion-activatable">
+              <ion-ripple-effect></ion-ripple-effect>
+              <img [src]="item.product_image">
+              <ion-card-content>
+                <div class="text-truncate">
+                  <ion-text color="dark">{{item.title}}</ion-text>
+                </div>
+                <div class="text-truncate ion-margin-bottom">
+                  <ion-text color="primary">{{item.request_amount}} request</ion-text>
+                </div>
+                <ion-note>{{item.country}}</ion-note>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+
+  </ion-grid> -->
+  <!-- <ion-button (click)="openProductDetailPreorder()">
     Tes aja
   </ion-button>
   <ion-button (click)="openProductDetailPreorder()">
     lalala
-  </ion-button>
-  
-  crkho
-  
+  </ion-button> -->
+
+
+
 </ion-content>
