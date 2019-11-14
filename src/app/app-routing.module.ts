@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'product-detail-preorder', loadChildren: './product-detail-preorder/product-detail-preorder.module#ProductDetailPreorderPageModule' },
   { path: 'product-detail-request', loadChildren: './product-detail-request/product-detail-request.module#ProductDetailRequestPageModule' },  { path: 'post-trip', loadChildren: './post-trip/post-trip.module#PostTripPageModule' },
   { path: 'negara', loadChildren: './negara/negara.module#NegaraPageModule' },
-  { path: 'product-list-page', loadChildren: './product-list-page/product-list-page.module#ProductListPagePageModule' }
+  { path: 'product-list-page', loadChildren: './product-list-page/product-list-page.module#ProductListPagePageModule' },
+  { path: 'trip', loadChildren: './trip/trip.module#TripPageModule' }
 
 ];
 @NgModule({

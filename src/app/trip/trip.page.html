@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Trip</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="tab1"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-item *ngFor="let item of items">
+        <ion-thumbnail slot="start">
+          <ion-img [src]="indonesia.jpg"></ion-img>
+        </ion-thumbnail>
+        <ion-label>Indonesia</ion-label>
+      </ion-item>
+</ion-content>
