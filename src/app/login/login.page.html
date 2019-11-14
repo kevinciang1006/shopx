@@ -5,19 +5,19 @@
       <ion-back-button defaultHref="tab1"></ion-back-button>
     </ion-buttons>
 
-    <ion-title class="cool-button">login</ion-title>
+    <ion-title>login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding style="background-color: darkblue;">
+<ion-content class="ion-padding" style="background-color: darkblue;">
   <br>
   <br>
   <!-- Expand -->
   <ion-button expand="full"><ion-icon slot="start" name="logo-facebook"></ion-icon>LOG IN WITH FACEBOOK</ion-button>
 
-  <ion-list text-center>
+  <ion-list  class="ion-text-center">
 
-    <H3> ------or------ </H3>
+    <h3> ------or------ </h3>
 
     <ion-item>
       <ion-label color="secondary">Email Address</ion-label>
@@ -37,9 +37,9 @@
 
     <br>
 
-    <p text-center tappable> Don't have account? <a routerlink="/Register">Register </a>
+    <p class="ion-text-center" tappable> Don't have account? <a routerlink="/Register">Register </a>
     </p>
-    <p text-center tappable><a routerlink="/forgetpass"> Forgot Your Password ?</a></p>
+    <p  class="ion-text-center" tappable><a routerlink="/forgetpass"> Forgot Your Password ?</a></p>
 
 
   </ion-list>
