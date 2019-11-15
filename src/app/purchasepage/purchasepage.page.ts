@@ -11,5 +11,10 @@ export class PurchasepagePage implements OnInit {
 
   ngOnInit() {
   }
-
+  openrequest() {
+    this._navCtrl.navigateForward('purchasepage');
+  }
+  openpreorder() {
+    this._navCtrl.navigateForward('purchasepage');
+  }
 }
