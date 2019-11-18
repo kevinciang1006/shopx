@@ -21,7 +21,12 @@ const routes: Routes = [
   { path: 'trip', loadChildren: './trip/trip.module#TripPageModule' },
   { path: 'recommendations', loadChildren: './recommendations/recommendations.module#RecommendationsPageModule' },
   { path: 'followers', loadChildren: './followers/followers.module#FollowersPageModule' },
-  { path: 'following', loadChildren: './following/following.module#FollowingPageModule' }
+  { path: 'following', loadChildren: './following/following.module#FollowingPageModule' },
+  
+  { path: 'post-trip', loadChildren: './post-trip/post-trip.module#PostTripPageModule' },
+  { path: 'negara', loadChildren: './negara/negara.module#NegaraPageModule' },
+  { path: 'product-list-page', loadChildren: './product-list-page/product-list-page.module#ProductListPagePageModule' },
+  { path: 'trip', loadChildren: './trip/trip.module#TripPageModule' }
 
 ];
 @NgModule({
