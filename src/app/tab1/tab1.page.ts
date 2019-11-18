@@ -101,6 +101,7 @@ export class Tab1Page {
   };
 
   constructor(
+    // tslint:disable-next-line: variable-name
     private _navCtrl: NavController,
   ) {
     this.topTravellers = this.topTravellers.sort((n1, n2) => n2.review_count - n1.review_count);
@@ -113,5 +114,12 @@ export class Tab1Page {
     // this._router.navigateByUrl('product-detail-preorder');
     this._navCtrl.navigateForward('product-detail-preorder');
   }
+  
+  opennegara() {
+    // this._router.navigateByUrl('negara');
+    this._navCtrl.navigateForward('negara');
+  }
+
+
 
 }
