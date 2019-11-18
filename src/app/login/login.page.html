@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tab1"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="background-color: darkblue;">
+  <br>
+  <br>
+  <!-- Expand -->
+  <ion-button expand="full"><ion-icon slot="start" name="logo-facebook"></ion-icon>LOG IN WITH FACEBOOK</ion-button>
+
+  <ion-list  class="ion-text-center">
+
+    <h3> ------or------ </h3>
+
+    <ion-item>
+      <ion-label color="secondary">Email Address</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label color="secondary">Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <br>
+    <br>
+    <!-- Default -->
+    <ion-button COLOR="secondary"> <ion-icon slot="start" name="md-filing"></ion-icon>LOG IN USING EMAIL</ion-button>
+
+
+    <br>
+
+    <p class="ion-text-center" tappable> Don't have account? <a routerlink="/Register">Register </a>
+    </p>
+    <p  class="ion-text-center" tappable><a routerlink="/forgetpass"> Forgot Your Password ?</a></p>
+
+
+  </ion-list>
+</ion-content>
