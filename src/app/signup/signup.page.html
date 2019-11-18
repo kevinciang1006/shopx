@@ -1,5 +1,10 @@
 <ion-header>
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tab1"></ion-back-button>
+    </ion-buttons>
+
     <ion-title>signup</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -8,7 +13,9 @@
   <br>
   <br>
   <!-- Expand -->
-  <ion-button expand="full"><ion-icon slot="start" name="logo-facebook"></ion-icon>SIGN UP WITH FACEBOOK</ion-button>
+  <ion-button expand="full">
+    <ion-icon slot="start" name="logo-facebook"></ion-icon>SIGN UP WITH FACEBOOK
+  </ion-button>
 
   <ion-list text-center>
 
@@ -28,21 +35,23 @@
       <ion-label color="secondary">Password</ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
-    
+
 
     <br>
     <br>
     <!-- Default -->
-    <ion-button COLOR="secondary"> <ion-icon slot="start" name="md-filing"></ion-icon>SIGN UP USING EMAIL</ion-button>
+    <ion-button COLOR="secondary">
+      <ion-icon slot="start" name="md-filing"></ion-icon>SIGN UP USING EMAIL
+    </ion-button>
 
 
     <br>
 
     <p text-center tappable> Already have an account? <a routerlink="/Register">Log In </a>
     </p>
-    <p text-center tappable>By signing up, you agree with Shopx's <a routerlink="/forgetpass"> Terms & Conditions and Privacy Policy</a></p>
+    <p text-center tappable>By signing up, you agree with Shopx's <a routerlink="/forgetpass"> Terms & Conditions and
+        Privacy Policy</a></p>
 
 
   </ion-list>
 </ion-content>
-
