@@ -25,36 +25,36 @@ export class Tab1Page {
 
   // 0, 1, 2, 3, 4;
 
- namaTimObject = {
-   0: 'KC',
-   1: 'Eldwin' 
- } ;
+  namaTimObject = {
+    0: 'KC',
+    1: 'Eldwin'
+  };
 
 
 
- productPreorder = {
-   nama: 'tes',
-   harga: 500,
-   negara: 'Indo',
-   gambar: 'gambar'
- }
+  productPreorder = {
+    nama: 'tes',
+    harga: 500,
+    negara: 'Indo',
+    gambar: 'gambar'
+  }
 
- productPreorders = [{
-  "image": "http://dummyimage.com/101x147.jpg/ff4444/ffffff",
-  "name": "Val Leahey",
-  "country": "Russia",
-  "price": "$8.91"
-}, {
-  "image": "http://dummyimage.com/180x204.jpg/cc0000/ffffff",
-  "name": "Laurianne Shade",
-  "country": "Portugal",
-  "price": "$9.65"
-}, {
-  "image": "http://dummyimage.com/188x202.bmp/5fa2dd/ffffff",
-  "name": "Alister Station",
-  "country": "Oman",
-  "price": "$4.16"
-}]
+  productPreorders = [{
+    "image": "http://dummyimage.com/101x147.jpg/ff4444/ffffff",
+    "name": "Val Leahey",
+    "country": "Russia",
+    "price": "$8.91"
+  }, {
+    "image": "http://dummyimage.com/180x204.jpg/cc0000/ffffff",
+    "name": "Laurianne Shade",
+    "country": "Portugal",
+    "price": "$9.65"
+  }, {
+    "image": "http://dummyimage.com/188x202.bmp/5fa2dd/ffffff",
+    "name": "Alister Station",
+    "country": "Oman",
+    "price": "$4.16"
+  }]
 
 
 
@@ -76,6 +76,23 @@ export class Tab1Page {
     }
   ]
 
+  featureProducts = [
+    {
+      "image": "http://dummyimage.com/1280x720.jpg/dddddd/000000"
+    },
+    {
+      "image": "http://dummyimage.com/1280x720.png/5fa2dd/ffffff"
+    },
+    {
+      "image": "http://dummyimage.com/1280x720.png/cc0000/ffffff"
+    },
+    {
+      "image": "http://dummyimage.com/1280x720.bmp/dddddd/000000"
+    },
+    {
+      "image": "http://dummyimage.com/1280x720.png/dddddd/000000"
+    }
+  ]
   // namaTimObject = [
 
   // ]

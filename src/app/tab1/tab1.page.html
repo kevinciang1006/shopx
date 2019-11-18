@@ -20,53 +20,14 @@
 <ion-content>
 
   <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide>
-      <ion-img src="assets/imgs/promo1.jpg"></ion-img>
-    </ion-slide>
-    <ion-slide>
-      <ion-img src="assets/imgs/promo2.jpg"></ion-img>
-    </ion-slide>
-    <ion-slide>
-      <ion-img src="assets/imgs/promo3.jpg"></ion-img>
+    <ion-slide *ngFor="let item of featureProducts">
+      <ion-img src="{{item.image}}"></ion-img>
     </ion-slide>
   </ion-slides>
 
-
-  ini nama nama tim mp
-
-  <div *ngFor="let nama of namaTim">
-    {{nama}}
-  </div>
-
-  <div>
-    {{namaTim[1]}}
-  </div>
-
-  <br>
-  ini product objedt 
-
-  <div>
-      {{product.color}}    
-  </div>
-
-  <div>
-      {{product.description}}    
-  </div>
-
-  <div>
-      {{product.name}}    
-  </div>
-
-  munculkan array object 
-  <div>{{products[0]}}</div>
-
-
-  <div>{{productPreorders[1].nama}}</div>
-
-  <br>
-  <div *ngFor="let item of productPreorders">
+  <!-- <div *ngFor="let item of productPreorders">
   {{item.name}}   
-  </div>
+  </div> -->
 
   <ion-grid>
     <ion-row>
