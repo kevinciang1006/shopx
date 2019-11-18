@@ -6,7 +6,7 @@
     </ion-item>
 
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button (click)="openpurchasepage()">
         <ion-icon slot="icon-only" name="basket"></ion-icon>
       </ion-button>
       <ion-button>
@@ -24,9 +24,6 @@
     </ion-slide>
   </ion-slides>
 
-  <!-- <div *ngFor="let item of productPreorders">
-  {{item.name}}   
-  </div> -->
 
   <ion-grid>
     <ion-row>
@@ -87,7 +84,8 @@
         <b>Trending Requests</b>
       </ion-col>
       <ion-col>
-        <ion-text class="ion-float-right" color="primary">See All</ion-text>
+          
+        <ion-text class="ion-float-right" color="primary" (click)="opentrendingreq()">See All</ion-text>
       </ion-col>
     </ion-row>
     <ion-row nowrap class="container-horizontal">
@@ -242,7 +240,6 @@
     </ion-row>
 
   </ion-grid>
-
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>

@@ -39,23 +39,6 @@ export class Tab1Page {
     gambar: 'gambar'
   }
 
-  productPreorders = [{
-    "image": "http://dummyimage.com/101x147.jpg/ff4444/ffffff",
-    "name": "Val Leahey",
-    "country": "Russia",
-    "price": "$8.91"
-  }, {
-    "image": "http://dummyimage.com/180x204.jpg/cc0000/ffffff",
-    "name": "Laurianne Shade",
-    "country": "Portugal",
-    "price": "$9.65"
-  }, {
-    "image": "http://dummyimage.com/188x202.bmp/5fa2dd/ffffff",
-    "name": "Alister Station",
-    "country": "Oman",
-    "price": "$4.16"
-  }]
-
 
 
   products = [
@@ -131,7 +114,6 @@ export class Tab1Page {
     // this._router.navigateByUrl('product-detail-preorder');
     this._navCtrl.navigateForward('product-detail-preorder');
   }
-  
 
   openLogin() {
     // this._router.navigateByUrl('product-detail-preorder');
@@ -146,4 +128,10 @@ export class Tab1Page {
 
 
 
+  opentrendingreq() {
+    this._navCtrl.navigateForward('trendingreq');
+  }
+  openpurchasepage() {
+    this._navCtrl.navigateForward('purchasepage');
+  }
 }

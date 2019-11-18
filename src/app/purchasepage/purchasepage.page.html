@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Purchase Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div padding>
+        <ion-segment [(ngModel)]="pet">
+          <ion-segment-button value="purchase">
+           Purchase
+          </ion-segment-button>
+          <ion-segment-button value="pre-order">
+            Pre-order
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      
+      <div [ngSwitch]="pet">
+        <ion-list *ngSwitchCase="'purchase'">
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img src="img/thumbnail-puppy-1.jpg">
+            </ion-thumbnail>
+            <h2>Samyang</h2>
+            <h3>Rp 100.000</h3>
+          </ion-item>
+          <ion-item>
+              <ion-thumbnail item-start>
+                <img src="img/thumbnail-puppy-1.jpg">
+              </ion-thumbnail>
+              <h2>Samyang</h2>
+              <h3>Rp 100.000</h3>
+            </ion-item>
+          ...
+        </ion-list>
+      
+        <ion-list *ngSwitchCase="'pre-order'">
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img src="img/thumbnail-kitten-1.jpg">
+            </ion-thumbnail>
+            <h2>Yupi</h2>
+            <h3>Rp 1.000</h3>
+          </ion-item>
+          ...
+        </ion-list>
+      </div>
+
+</ion-content>

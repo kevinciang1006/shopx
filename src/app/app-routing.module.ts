@@ -26,7 +26,10 @@ const routes: Routes = [
   { path: 'post-trip', loadChildren: './post-trip/post-trip.module#PostTripPageModule' },
   { path: 'negara', loadChildren: './negara/negara.module#NegaraPageModule' },
   { path: 'product-list-page', loadChildren: './product-list-page/product-list-page.module#ProductListPagePageModule' },
-  { path: 'trip', loadChildren: './trip/trip.module#TripPageModule' }
+  { path: 'trip', loadChildren: './trip/trip.module#TripPageModule' },
+  { path: 'product-request-detail', loadChildren: './product-request-detail/product-request-detail.module#ProductRequestDetailPageModule' },
+  { path: 'trendingreq', loadChildren: './trendingreq/trendingreq.module#TrendingreqPageModule' },
+  { path: 'purchasepage', loadChildren: './purchasepage/purchasepage.module#PurchasepagePageModule' }
 
 ];
 @NgModule({
